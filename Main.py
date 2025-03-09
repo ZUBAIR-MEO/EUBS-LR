@@ -30,8 +30,8 @@ st.write("Enter house details to predict the price.")
 st.sidebar.header("🔹 Input House Features")
 
 # Define user input fields
-lot_area = st.sidebar.number_input("Avg. Area Income", min_value=500, max_value=100000, step=100)
-overall_quality = st.sidebar.selectbox("Avg. Area House Age", options=list(range(1, 11)))
+Avg._Area_Income = st.sidebar.number_input("Avg. Area Income", min_value=500, max_value=100000, step=100)
+Avg._Area_House_Age = st.sidebar.selectbox("Avg. Area House Age", options=list(range(1, 11)))
 
 # Ensure model is loaded
 if model:
@@ -50,7 +50,7 @@ if model:
 # Display dataset information
 st.subheader("📊 Dataset Overview")
 try:
-    train = pd.read_csv('/kaggle/input/madsc201-house-price-dataset/train.csv')  # Ensure correct path to dataset
+    train = pd.read_csv('/kaggle/input/help-predicting-housing-prices-usa/USA_Housing.csv')  # Ensure correct path to dataset
 
     st.write(train.head())
 
